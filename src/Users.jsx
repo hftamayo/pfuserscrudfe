@@ -1,13 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect } from 'react';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { getUser } from './redux/userSlice';
 
 function Users() {
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const fetchData = async() => {
             try{
-                const response = await axios.get('');
+                const response = await axios.get('http://localhost:8004');
+                dispatch();
             } catch(error){
                 console.log(error)
             }
