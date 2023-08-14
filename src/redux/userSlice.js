@@ -6,11 +6,18 @@ const userSlice = createSlice({
     users: [],
   },
   reducers: {
-    getUser : (state, action) => {
-
-    }
+    getUser: (state, action) => {
+      state.users = action.payload.map((user) => {
+        return {
+          id: user._id,
+          name: user.name,
+          email: user.email,
+          age: user.age,
+        };
+      });
+    },
   },
 });
 
-export const {getUser} = userSlice.actions;
+export const { getUser } = userSlice.actions;
 export default userSlice.reducer;
