@@ -5,8 +5,12 @@ const userSlice = createSlice({
   initialState: {
     users: [],
   },
-  reducers: {},
+  reducers: {
+    getUser : (state, action) => {
+
+    }
+  },
 });
 
-export const {} = userSlice.actions;
+export const {getUser} = userSlice.actions;
 export default userSlice.reducer;
