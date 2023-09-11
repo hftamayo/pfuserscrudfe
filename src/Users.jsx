@@ -2,7 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { getUser } from "./redux/userSlice";
+
 
 function Users() {
   const dispatch = useDispatch();
@@ -24,7 +26,7 @@ function Users() {
   return (
     <div className="d-flex vh-100 vw-100 bg-primary justify-content-center align-items-center">
       <div className="w-50 bg-white rounded p-5">
-        <button className="btn btn-success btn-sm">Add +</button>
+        <Link to="/create" className="btn btn-success btn-sm">Add +</Link>
         <table className="table">
           <thead>
             <tr>
