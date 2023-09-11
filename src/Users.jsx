@@ -14,6 +14,7 @@ function Users() {
       try {
         const response = await axios.get("http://localhost:8004");
         dispatch(getUser(response.data));
+        console.log(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -21,8 +22,8 @@ function Users() {
     fetchData();
   }, []);
   return (
-    <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
-      <div className="w-50 bg-white rounded p-3">
+    <div className="d-flex vh-100 vw-100 bg-primary justify-content-center align-items-center">
+      <div className="w-50 bg-white rounded p-5">
         <button className="btn btn-success btn-sm">Add +</button>
         <table className="table">
           <thead>
@@ -35,7 +36,7 @@ function Users() {
           </thead>
           <tbody>
             {users.map((user) => {
-              <tr>
+              return <tr>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.age}</td>
