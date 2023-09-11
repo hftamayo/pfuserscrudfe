@@ -41,7 +41,7 @@ function Users() {
                 <td>{user.email}</td>
                 <td>{user.age}</td>
                 <td>
-                  <button className="btn btn-sm btn-success">Update</button>
+                  <button className="btn btn-sm btn-success me-2">Update</button>
                   <button className="btn btn-sm btn-danger">Delete</button>
                 </td>
               </tr>;
