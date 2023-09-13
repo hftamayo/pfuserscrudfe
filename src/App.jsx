@@ -9,7 +9,7 @@ import { getUser } from "./redux/userSlice";
 
 function App() {
   const dispatch = useDispatch();
-    
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,7 +26,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Users />}></Route>
+      <Route path="/view" element={<Users />}></Route>
       <Route path="/create" element={<CreateUser />}></Route>
     </Routes>
     </BrowserRouter>
