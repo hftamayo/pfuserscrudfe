@@ -1,16 +1,24 @@
 import axios from "axios";
 import React from "react";
+import { addUser } from "./redux/userSlice";
+import { useDispatch } from "react-redux";
 
 function CreateUser() {
-  const [name, setName] = useState();
+  const [firstname, setFirstName] = useState();
+  const [lastname, setLastName] = useState();  
   const [email, setEmail] = useState();
   const [age, setAge] = useState();
+
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8004/createuser", { name, email, age })
-      .then((res) => console.log(res))
+      .post("http://localhost:8004/createuser", { firstname, lastname, email, age })
+      .then((res) => {
+        dispatch(addUser(res.data));
+        console.log(res);
+      })
       .catch((err) => console.log(err));
   };
 
@@ -20,14 +28,23 @@ function CreateUser() {
         <form onSubmit={handleSubmit}>
           <h2>Add User</h2>
           <div className="mb-2">
-            <label htmlFor="">Name</label>
+            <label htmlFor="">First Name</label>
             <input
               type="text"
-              placeholder="Enter Name"
+              placeholder="Enter First Name"
               className="form-control"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
+          <div className="mb-2">
+            <label htmlFor="">Last Name</label>
+            <input
+              type="text"
+              placeholder="Enter Last Name"
+              className="form-control"
+              onChange={(e) => setLastName(e.target.value)}
+            />
+          </div>          
           <div className="mb-2">
             <label htmlFor="">Email</label>
             <input
