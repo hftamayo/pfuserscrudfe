@@ -1,7 +1,8 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { addUser } from "./redux/userSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function CreateUser() {
   const [firstname, setFirstName] = useState();
@@ -10,6 +11,7 @@ function CreateUser() {
   const [age, setAge] = useState();
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +19,7 @@ function CreateUser() {
       .post("http://localhost:8004/createuser", { firstname, lastname, email, age })
       .then((res) => {
         dispatch(addUser(res.data));
-        console.log(res);
+        navigate('/view');
       })
       .catch((err) => console.log(err));
   };
