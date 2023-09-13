@@ -8,7 +8,7 @@ function CreateUser() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8004/create", {name, email, age})
+    axios.post("http://localhost:8004/createuser", {name, email, age})
     .then(res => console.log(res))
     .catch(err => console.log(err))
   };
