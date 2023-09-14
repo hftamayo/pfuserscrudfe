@@ -26,8 +26,8 @@ function Users() {
                 <td>{user.email}</td>
                 <td>{user.age}</td>
                 <td>
-                  <button className="btn btn-sm btn-success me-2">Update</button>
-                  <button className="btn btn-sm btn-danger">Delete</button>
+                  <Link to={`/edit/${user.id}`} className="btn btn-sm btn-success me-2">Update</Link>
+                  <Link to={`/delete/${user.id}`} className="btn btn-sm btn-danger">Delete</Link>
                 </td>
               </tr>;
             })}

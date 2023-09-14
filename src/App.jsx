@@ -28,6 +28,7 @@ function App() {
     <Routes>
       <Route path="/view" element={<Users />}></Route>
       <Route path="/create" element={<CreateUser />}></Route>
+      <Route path="/edit/:id" element={<UpdateUser />}></Route>
     </Routes>
     </BrowserRouter>
   );
