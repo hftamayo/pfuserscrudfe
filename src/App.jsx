@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Users from "./Users";
 import CreateUser from "./CreateUser";
+import UpdateUser from "./UpdateUser";
 import { getUser } from "./redux/userSlice";
 
 function App() {
