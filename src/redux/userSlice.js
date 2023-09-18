@@ -30,6 +30,10 @@ const userSlice = createSlice({
         age: action.payload.age,
       };
     },
+    deleteUser: (state, action) => {
+      const id = action.payload.id;
+      state.users = state.users.filter(u => u.id !== id)
+    }
   },
 });
 
