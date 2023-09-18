@@ -16,7 +16,7 @@ function App() {
       try {
         const response = await axios.get("http://localhost:8004/getusers");
         dispatch(getUser(response.data));
-        console.log(response.data);
+        //console.log(response.data);
       } catch (error) {
         console.log(error);
       }
