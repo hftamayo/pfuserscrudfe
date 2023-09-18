@@ -17,10 +17,10 @@ function UpdateUser() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleUpdate = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8004/updateuser", {
+      .put("http://localhost:8004/updateuser/"+id, {
         firstname,
         lastname,
         email,
@@ -36,7 +36,7 @@ function UpdateUser() {
   return (
     <div className="d-flex vh-100 vw-100 bg-primary justify-content-center align-items-center">
       <div className="w-50 bg-white rounded p-3">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleUpdate}>
           <h2>Update User</h2>
           <div className="mb-2">
             <label htmlFor="">First Name</label>
