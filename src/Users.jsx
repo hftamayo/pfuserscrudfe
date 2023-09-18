@@ -13,7 +13,7 @@ function Users() {
         <table className="table">
           <thead>
             <tr>
-              <th>Name</th>
+              <th>FullName</th>
               <th>Email</th>
               <th>Age</th>
               <th>Actions</th>
@@ -22,7 +22,7 @@ function Users() {
           <tbody>
             {users.map((user) => {
               return <tr>
-                <td>{user.name}</td>
+                <td>{user.firstname + " " + user.lastname}</td>
                 <td>{user.email}</td>
                 <td>{user.age}</td>
                 <td>
