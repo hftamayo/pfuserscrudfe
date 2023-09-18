@@ -8,10 +8,11 @@ function UpdateUser() {
   const { id } = useParams();
   const users = useSelector((state) => state.users.users);
   const user = users.find((u) => u.id === id);
-  const [firstname, setFirstName] = useState();
-  const [lastname, setLastName] = useState();
-  const [email, setEmail] = useState();
-  const [age, setAge] = useState();
+  console.log(user);
+  const [firstname, setFirstName] = useState(user.firstname);
+  const [lastname, setLastName] = useState(user.lastname);
+  const [email, setEmail] = useState(user.email);
+  const [age, setAge] = useState(user.age);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -41,8 +42,8 @@ function UpdateUser() {
             <label htmlFor="">First Name</label>
             <input
               type="text"
-              placeholder="Enter First Name"
               className="form-control"
+              value={firstname}
               onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
@@ -50,8 +51,8 @@ function UpdateUser() {
             <label htmlFor="">Last Name</label>
             <input
               type="text"
-              placeholder="Enter Last Name"
               className="form-control"
+              value={lastname}
               onChange={(e) => setLastName(e.target.value)}
             />
           </div>
@@ -59,8 +60,8 @@ function UpdateUser() {
             <label htmlFor="">Email</label>
             <input
               type="email"
-              placeholder="Enter Email"
               className="form-control"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -68,8 +69,8 @@ function UpdateUser() {
             <label htmlFor="">Age</label>
             <input
               type="text"
-              placeholder="Age"
               className="form-control"
+              value={age}
               onChange={(e) => setAge(e.target.value)}
             />
           </div>
