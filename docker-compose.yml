@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  reactcrudusers:
+    container_name: reactcrudusers
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    networks:
+      - crudusersnetwork
+
+networks:
+  crudusersnetwork:
