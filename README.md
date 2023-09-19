@@ -1,8 +1,38 @@
-# React + Vite
+# CRUD DEMO App #
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a fully functional DEMO of a CRUD built using React, it does not includes testing and requires refactor
 
-Currently, two official plugins are available:
+## Concept ##
+- CRUD operations
+- It is just a project to be used as a Proof of Concept
+- Refactor it first then use it as a template
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Version 1 specs ##
+
+### Technical Stack ###
+* Data storage: MongoDB [Backend is separate here](https://github.com/hftamayo/pfuserscrudbe)
+* Content manager: Redux Toolkit
+* CSS manager: Bootstrap
+* React components and Axios
+
+### Available Functions ###
+* Add
+* Read
+* Update
+* Delete
+
+## Proof of Concept ##
+[Todo]
+
+## Branches ##
+* OldStable : deprecated versions of the project
+* Stable: current or latest official version
+* Unstable: sourcecode that has not been tested and approved
+* Experimental: sourcecode in progress
+
+## Bugs ##
+Please refer to the Issues section in this repository
+
+## References ##
+[Original Tutorial](https://youtu.be/FOK45_sEqK8?si=-gDlkKC2v_UGQL3q)
