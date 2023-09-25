@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   reactcrudusers:
-    container_name: reactcrudusers
+    container_name: reactfeusers
     build:
       context: ./
       dockerfile: Dockerfile
