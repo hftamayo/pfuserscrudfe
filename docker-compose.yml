@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  reactcrudusers:
+  app:
     container_name: reactfeusers
     build:
       context: ./
@@ -11,3 +11,4 @@ services:
 
 networks:
   crudusersnetwork:
+    external: true
