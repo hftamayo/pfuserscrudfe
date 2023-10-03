@@ -31,6 +31,10 @@ This is a fully functional DEMO of a CRUD built using React, it does not include
 * Unstable: sourcecode that has not been tested and approved
 * Experimental: sourcecode in progress
 
+## Snapshots ##
+![localhost/view](./snapshots/view.png)
+![localhost/create](./snapshots/add.png)
+
 ## Bugs ##
 Please refer to the Issues section in this repository
 
